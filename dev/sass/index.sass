@@ -1,0 +1,1053 @@
+// === Imports === //
+
+@import 'utils/main'
+
+// === /  Imports === //
+
+// === Commons === //
+
+.section-inner
+	width: 1180px
+	margin: 0 auto
+
+.section-arrow
+	width: 40px
+	height: 73px
+	position: absolute
+	z-index: 10
+	margin: auto
+	padding: 0 150px
+	opacity: 0.5
+	transition: .2s
+
+	&:hover
+		opacity: 0.8
+		cursor: pointer
+		transform: scale(0.9)
+
+	&.left
+		top: 0
+		left: 0
+		bottom: 0
+	
+	&.right
+		top: 0
+		right: 0
+		bottom: 0
+
+.description
+	&__title,
+	&__text
+		text-align: center
+
+	&__title
+		@include font-main
+		font-size: 30px
+		font-weight: 600
+		line-height: 70px
+		color: $color-basic
+
+	&__text
+		@include font-secondary
+		width: 70%
+		margin: 0 auto
+		font-size: 16px
+		font-weight: 300
+		line-height: 28px
+		color: $color-text
+
+.btn-main
+	@include font-main
+	font-size: 14px
+	font-weight: 800
+	padding: 20px 35px
+	background-color: #998675
+	color: #fff
+	text-transform: uppercase
+	border-radius: 4px
+	border-bottom: 3px solid #736357
+	transition: .2s
+	display: inline-block
+
+	&:hover
+		transform: scale(0.9)
+
+
+// === / Commons === //
+
+// === Header === //
+
+.section-header
+	position: relative
+	background: url('../img/background.png') no-repeat 10% 10%
+	background-size: cover
+	height: 100vh
+
+	.section-inner
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		height: 100vh
+	
+
+.section-header
+	&::before
+		position: absolute
+		top: 0
+		right: 0
+		left: 0
+		bottom: 0
+		margin: auto
+		content: ''
+		background: rgba(0, 0, 0, 0.6)
+		z-index: 5
+
+	&__nav
+		width: 100%
+		display: flex
+		justify-content: space-between
+		position: relative
+		z-index: 10
+		margin-top: 40px
+
+		&-logo
+			flex: 1
+
+		&-menu
+			display: flex
+			align-items: center
+
+			li
+				padding: 0 15px
+
+				a
+					@include font-secondary
+					font-size: 14px
+					font-weight: 300
+					color: #fff
+					transition: .2s
+
+					&.active,
+					&:hover
+						color: $color-active
+
+		&-icons
+			display: flex
+			align-items: center
+			margin-left: 60px
+
+			img
+				padding: 0 14px
+				transition: .2s
+
+				&:hover
+					cursor: pointer
+					transform: scale(0.8)
+
+	&__content
+		width: 100%
+		position: relative
+		z-index: 10
+		padding: 250px 0
+
+		&-subtitle,
+		&-title,
+		&-text,
+		&-button
+			text-align: center
+			color: #fff
+
+		&-subtitle
+			@include font-main
+			font-size: 36px
+			font-weight: 300
+			line-height: 40px
+
+		&-title
+			@include font-main
+			font-size: 52px
+			font-weight: 800
+			line-height: 70px
+
+		&-text
+			width: 55%
+			margin: 0 auto
+			@include font-secondary
+			font-size: 16px
+			font-weight: 300
+			line-height: 25px
+
+		&-button
+			margin-top: 30px
+	
+	&__dots
+		width: 100%
+		position: relative
+		z-index: 10
+		align-self: flex-end
+		padding: 40px 0
+
+		&-list
+			display: flex
+			justify-content: center
+
+		li
+			@include size(10px)
+			background-color: rgba(255, 255, 255, .5)
+			border-radius: 50%
+			margin: 0 5px
+			transition: .2s
+
+			&.active,
+			&:hover
+				border: 2px solid $color-active
+				background: none
+				cursor: pointer
+				transform: scale(1.5)
+
+// === / Header === //
+
+// === Promo Line === //
+
+.section-promo-line
+
+	&__content
+		display: flex
+		justify-content: center
+		align-items: center
+		padding: 80px 0
+
+		&-item
+			position: relative
+
+			&::before
+				position: absolute
+				top: 220px
+				right: 0
+				left: 0
+				bottom: 0
+				margin: auto
+				content: ''
+				width: 70px
+				height: 3px
+				background-color: $color-active
+				opacity: 0.3
+				transition: .2s
+		
+			&.active,
+			&:hover
+
+				&::before
+					opacity: 1
+
+				h3
+					color: $color-active
+					cursor: pointer
+
+			&_title,
+			&_text
+				text-align: center
+
+			&_icon
+				display: flex
+				justify-content: center
+			
+				img
+					padding: 10px 0
+
+			&_title
+				@include font-main
+				font-size: 22px
+				font-weight: 600
+				line-height: 50px
+				color: $color-basic
+				transition: .2s
+			
+			&_text
+				@include font-secondary
+				font-size: 14px
+				font-weight: 400
+				line-height: 20px
+				color: $color-text
+
+// === / Promo Line === //
+
+// === Demo === //
+
+.section-demo
+	background-color: #fbfaf8
+
+	.description
+		padding-top: 60px
+		padding-bottom: 40px
+
+	&__photo
+		display: flex
+		justify-content: center
+		align-self: flex-end
+
+// === / Demo === //
+
+// === Purchase Line === //
+
+.section-purchase-line
+	background: linear-gradient(to right, #211b19, #4e3427)
+
+	&__wrapper
+		display: flex
+		justify-content: space-between
+		padding: 60px 0
+
+		&-article
+
+			&_title
+				@include font-main
+				font-size: 28px
+				font-weight: 400
+				line-height: 40px
+				color: #fff
+
+				span
+					color: $color-active
+
+			&_subtitle
+				@include font-secondary
+				font-size: 18px
+				font-weight: light
+				line-height: 20px
+				color: #615855
+		
+		&-button
+
+// === / Purchase Line === //
+
+// === Projects === //
+
+.section-projects
+
+	.description
+		padding-top: 60px
+		padding-bottom: 40px
+
+	&__nav
+		display: flex
+		justify-content: center
+		padding-bottom: 40px
+
+		&-menu
+			display: flex
+
+			li
+				margin: 0 5px
+
+				a
+					@include font-secondary
+					background: none
+					border: 1px solid $color-text
+					color: $color-text
+					font-size: 14px
+					font-weight: light
+					padding: 8px 26px
+					border-radius: 4px
+					transition: .2s
+
+					&.active,
+					&:hover
+						cursor: pointer
+						color: #fff
+						background-color: #998675
+
+	&__content
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
+
+		&-item
+			width: 370px
+			height: 340px
+			margin: 20px 10px
+
+			&.active,
+			&:hover
+				cursor: pointer
+
+				.photo
+					width: 370px 
+					height: 279px
+
+					&::before
+						position: absolute
+						top: 0
+						right: 0
+						left: 0
+						bottom: 0
+						margin: auto
+						content: ''
+						background: rgba(0, 0, 0, 0.6)
+				
+				.article
+					background-color: #362f2d
+
+					&::before
+						background-color: #362f2d
+
+					h3
+						color: #fff
+					
+					p
+						color: $color-active
+
+			&_photo
+				&-container
+					width: 370px 
+					height: 279px
+					position: relative
+
+					&::before
+						position: absolute
+						top: 0
+						right: 0
+						left: 0
+						bottom: 0
+						margin: auto
+						content: ''
+						background: rgba(0, 0, 0, 0)
+
+					&.photo-1
+						background: url('../img/photo-1.png') no-repeat
+						background-size: 370px 279px
+
+					&.photo-2
+						background: url('../img/photo-2.png') no-repeat
+						background-size: 370px 279px
+					
+					&.photo-3
+						background: url('../img/photo-3.png') no-repeat
+						background-size: 370px 279px
+						
+					&.photo-4
+						background: url('../img/photo-4.png') no-repeat
+						background-size: 370px 279px
+					
+					&.photo-5
+						background: url('../img/photo-5.png') no-repeat
+						background-size: 370px 279px
+						
+					&.photo-6
+						background: url('../img/photo-6.png') no-repeat
+						background-size: 370px 279px
+			
+			&_article
+				width: 370px
+				position: relative
+				padding: 20px 5px 20px 20px
+				background-color: #fbfaf8
+
+				&::before
+					@include size(30px)
+					position: absolute
+					top: -80px
+					right: 300px
+					left: 0
+					bottom: 0
+					margin: auto
+					content: ''
+					background-color: #fbfaf8
+					transform: rotate(45deg)
+
+				&-title
+					@include font-main
+					font-size: 20px
+					font-weight: 500
+					color: $color-active
+
+				&-subtitle
+					@include font-secondary
+					font-size: 14px
+					font-weight: light
+					color: $color-text
+	
+	&__button
+		display: flex
+		justify-content: center
+		margin-top: 40px
+		margin-bottom: 80px
+
+// === / Projects === //
+
+// === Video === //
+
+.section-video
+	background: url('../img/bg-video.png') no-repeat 50% 50%
+	background-size: cover
+	position: relative
+
+	&::before
+		position: absolute
+		top: 0
+		right: 0
+		left: 0
+		bottom: 0
+		margin: auto
+		content: ''
+		background-color: rgba(0, 0, 0, 0.5)
+		z-index: 5
+
+	&__wrapper
+		padding: 200px 0
+		position: relative
+		z-index: 10
+
+		&-play
+			width: 100px
+			height: 100px
+			border-radius: 50%
+			display: flex
+			justify-content: center
+			align-items: center
+			margin: 0 auto
+			background-color: rgba(0, 0, 0, 0.5)
+			transition: .4s
+
+			&:hover
+				transform: rotate(-275deg) scale(0.9)
+				cursor: pointer
+
+			img
+				width: 80px
+				height: 80px
+
+		.description
+			padding-top: 50px
+			padding-bottom: 40px
+
+			h2
+				color: #fff
+
+			p
+				width: 50%
+				color: #fff
+
+		&-time
+			@include font-secondary
+			font-size: 14px
+			font-weight: 600
+			color: $color-active
+			text-align: center
+
+// === / Video === //
+
+// === Mobile === //
+
+.section-mobile
+
+	&__wrapper
+		display: flex
+		align-items: center
+		padding-top: 80px
+
+		&-photo
+			align-self: flex-end
+
+			img
+
+		&-article
+
+			.description
+
+				&__title,
+				&__text
+					text-align: left
+
+				&__text
+					width: 100%
+					margin: 0
+
+			&_list
+				padding: 50px 100px
+
+				li
+					@include font-secondary
+					position: relative
+					font-size: 16px
+					font-weight: light
+					color: $color-text
+					margin: 15px 0
+
+					&::before
+						position: absolute
+						top: 0
+						right: 0
+						left: -660px
+						bottom: 0
+						margin: auto
+						content: ''
+						@include size(25px)
+						border-radius: 50%
+						background-color: $color-active
+					
+					&::after
+						position: absolute
+						top: 0
+						right: 0
+						left: -663px
+						bottom: 0
+						margin: auto
+						content: ''
+						@include size(8px)
+						border-top: 2px solid #fff
+						border-right: 2px solid #fff
+						transform: rotate(45deg)
+						background: none
+
+// === / Mobile === //
+
+// === Stats Line === //
+
+.section-stats-line
+	background: linear-gradient(to right, #211b19, #4e3427)
+
+	&__content
+		display: flex
+		justify-content: center
+		padding: 70px 0
+
+		&-item
+			padding: 0 50px
+			position: relative
+
+			&::before
+				position: absolute
+				top: 200px
+				right: 0
+				left: 0
+				bottom: 0
+				margin: auto
+				content: ''
+				width: 40px
+				height: 2px
+				background-color: #fff
+
+			&_photo
+				display: flex
+				justify-content: center
+
+			&_title,
+			&_subtitle
+				text-align: center
+			
+			&_title
+				@include font-secondary
+				font-size: 48px
+				font-weight: 100
+				color: #fff
+				line-height: 80px
+			
+			&_subtitle
+				@include font-secondary
+				font-size: 14px
+				font-weight: light
+				color: $color-active
+				text-transform: uppercase
+
+// === / Stats Line === //
+
+// === Posts === //
+
+.section-posts
+
+	.description
+		padding-top: 60px
+		padding-bottom: 40px
+
+	&__content
+		display: flex
+		justify-content: center
+
+		&-item
+			border: 1px solid #f8f8f8
+			margin: 0 10px
+
+			&.active
+				cursor: pointer
+
+				.photo
+					&::before
+						background-color: rgba(0, 0, 0, 0.6)
+					
+					.date
+						
+						h4
+							background-color: #c7b299
+
+						h5
+							background-color: #a48d72
+
+
+				.article
+					background-color: #362f2d
+
+					h3
+						color: $color-active
+
+					p
+						color: #fff
+
+			&_photo
+				width: 370px
+				height: 220px
+				position: relative
+				z-index: 5
+
+				&::before
+					position: absolute
+					top: 0
+					right: 0
+					left: 0
+					bottom: 0
+					margin: auto
+					content: ''
+					background-color: rgba(0, 0, 0, 0)
+
+				&.photo-1
+					background: url('../img/bg-photo-3.png') no-repeat
+					background-size: 370px 220px
+				
+				&.photo-2
+					background: url('../img/bg-photo-2.png') no-repeat
+					background-size: 370px 220px
+				
+				&.photo-3
+					background: url('../img/bg-photo-1.png') no-repeat
+					background-size: 370px 220px
+
+				&-date
+					width: 50px
+					position: relative
+					top: 20px
+					left: 20px
+					z-index: 10
+
+					& h4,
+					& h5
+						color: #fff
+
+					h4
+						@include font-secondary
+						font-size: 24px
+						font-weight: 200
+						padding: 5px 10px
+						text-align: center
+						background-color: #363636
+						border-top-left-radius: 4px
+						border-top-right-radius: 4px
+
+					h5
+						@include font-other
+						font-size: 12px
+						font-weight: 400
+						padding: 5px 10px
+						text-align: center
+						background-color: #252525
+						border-bottom-left-radius: 4px
+						border-bottom-right-radius: 4px
+			
+			&_article
+				padding: 10px 30px 5px 30px
+				width: 370px
+
+				&-title
+					@include font-main
+					font-size: 20px
+					font-weight: 500
+					color: $color-basic
+					line-height: 54px
+
+				&-text
+					@include font-secondary
+					font-size: 14px
+					font-weight: light
+					color: $color-text
+					line-height: 20px
+				
+				&-link
+					@include font-main
+					font-size: 14px
+					font-weight: 500
+					color: $color-active
+					line-height: 54px
+
+					&:hover
+						text-decoration: underline
+	
+	&__arrows
+		padding: 80px 0
+		position: relative
+		display: flex
+		justify-content: space-between
+
+		&-right,
+		&-left
+			position: absolute
+			top: 0
+			bottom: 0
+			margin: auto
+			background: none
+			border: 1px solid #d8d8d8
+			border-radius: 50%
+			@include size(30px)
+			transition: .2s
+
+			&:hover
+				cursor: pointer
+				border-color: $color-active
+				transform: scale(1.1)
+
+				&::before
+					border-color: $color-active
+
+			&::before
+				position: absolute
+				top: 0
+				bottom: 0
+				margin: auto
+				background: none
+				content: ''
+				@include size(10px)
+				transition: .2s
+
+		&-left
+			right: 40px
+			left: 0
+
+			&::before
+				right: -5px
+				left: 0
+				border-top: 1px solid #d8d8d8
+				border-left: 1px solid #d8d8d8
+				transform: rotate(-45deg)
+		
+		&-right
+			right: 0
+			left: 40px
+
+			&::before
+				right: 0
+				left: -5px
+				border-top: 1px solid #d8d8d8
+				border-right: 1px solid #d8d8d8
+				transform: rotate(45deg)
+
+// === / Posts === //
+
+// === Partners === //
+
+.section-partners
+	position: relative
+	background: url('../img/bg-logos.png') no-repeat 50% 50%
+	background-size: cover
+	z-index: 5
+
+	&::before
+		position: absolute
+		top: 0
+		right: 0
+		left: 0
+		bottom: 0
+		margin: auto
+		content: ''
+		background-color: rgba(0, 0, 0, 0.6)
+
+	&__content
+		position: relative
+		display: flex
+		justify-content: center
+		align-items: center
+		padding: 120px 0
+		z-index: 10
+
+		&-item
+			margin: 0 45px
+
+			img
+
+// === / Partners === //
+
+// === About === //
+
+.section-about
+	background-color: #191919
+
+	&__content
+		display: flex
+		justify-content: space-between
+		padding: 80px 0
+
+		.col
+			width: 260px
+
+		&-col1
+
+			&_logo
+				margin-bottom: 30px
+
+			&_text,
+			&_more
+				@include font-secondary
+				font-size: 14px
+			
+			&_text
+				font-weight: light
+				color: $color-basic
+				line-height: 25px
+				margin-bottom: 30px
+
+			&_more
+				font-weight: noraml
+				color: #fff
+
+				&:hover
+					text-decoration: underline
+
+		&-col2
+
+			&_title
+				@include font-main
+				font-size: 24px
+				font-weight: 700
+				color: #fff
+				margin-bottom: 30px
+
+			&_post
+				margin: 20px 0
+
+				&:hover
+					cursor: pointer
+
+					& h3
+						color: #fff
+					
+					& p
+						color: $color-active
+				
+				&-title,
+				&-text
+					@include font-secondary
+					line-height: 25px
+
+				&-title
+					font-size: 12px
+					font-weight: light
+					color: #363636
+					transition: .2s
+
+				&-text
+					font-size: 14px
+					font-weight: noraml
+					color: $color-basic
+					transition: .2s
+					
+		&-col3
+
+			&_title
+				@include font-main
+				font-size: 24px
+				font-weight: 700
+				color: #fff
+				margin-bottom: 30px
+
+			&_post
+				margin: 20px 0
+
+				&-title,
+				&-text
+					@include font-secondary
+					font-weight: light
+					
+				&-title
+					font-size: 14px
+					color: $color-basic
+					line-height: 20px
+
+					& span
+						color: #02b4e4
+
+				&-text
+					font-size: 12px
+					color: #363636
+					line-height: 35px
+
+		&-col4
+
+			&_title
+				@include font-main
+				font-size: 24px
+				font-weight: 700
+				color: #fff
+				margin-bottom: 30px
+
+			&_container
+				display: flex
+				flex-wrap: wrap
+
+				&-item
+					width: 120px
+					height: 90px
+					margin-bottom: 10px
+					margin-right: 10px
+
+					img
+						width: 120px
+						height: 90px
+
+// === / About === //
+
+// === Footer === //
+
+.section-footer
+	background-color: #111111
+
+	&__bar
+		display: flex
+		justify-content: space-between
+		padding: 45px 0
+
+		&-copyright
+
+			&_list
+				display: flex
+
+				li
+					margin: 0 10px
+
+					a
+						@include font-secondary
+						font-size: 13px
+						font-weight: light
+						color: $color-basic
+						transition: .2s
+
+						&:hover
+							cursor: pointer
+							color: $color-active
+
+						span
+							color: #959595
+
+		&-author
+
+			&_list
+				display: flex
+
+				li
+					margin: 0 10px
+					@include font-secondary
+					font-size: 13px
+					font-weight: light
+					color: $color-basic
+					transition: .2s
+
+					span
+						color: #959595
+
+// === / Footer === //
